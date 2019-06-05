@@ -17,6 +17,12 @@ namespace UUExcelWorkbook {
     [global::System.Security.Permissions.PermissionSetAttribute(global::System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
     public sealed partial class Лист5 : Microsoft.Office.Tools.Excel.WorksheetBase {
         
+        internal Microsoft.Office.Tools.Excel.NamedRange Data1;
+        
+        internal Microsoft.Office.Tools.Excel.NamedRange Data2;
+        
+        internal Microsoft.Office.Tools.Excel.NamedRange title;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "15.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -114,6 +120,9 @@ namespace UUExcelWorkbook {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void BeginInitialization() {
             this.BeginInit();
+            this.Data1.BeginInit();
+            this.Data2.BeginInit();
+            this.title.BeginInit();
         }
         
         /// 
@@ -121,6 +130,9 @@ namespace UUExcelWorkbook {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "15.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.title.EndInit();
+            this.Data2.EndInit();
+            this.Data1.EndInit();
             this.EndInit();
         }
         
@@ -129,6 +141,9 @@ namespace UUExcelWorkbook {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "15.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeControls() {
+            this.Data1 = Globals.Factory.CreateNamedRange(null, null, "Data1", "Data1", this);
+            this.Data2 = Globals.Factory.CreateNamedRange(null, null, "Data2", "Data2", this);
+            this.title = Globals.Factory.CreateNamedRange(null, null, "title", "title", this);
         }
         
         /// 
@@ -136,6 +151,21 @@ namespace UUExcelWorkbook {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "15.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeComponents() {
+            // 
+            // Data1
+            // 
+            this.Data1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Data2
+            // 
+            this.Data2.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // title
+            // 
+            this.title.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Лист5
+            // 
         }
         
         /// 
@@ -143,6 +173,17 @@ namespace UUExcelWorkbook {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         private bool NeedsFill(string MemberName) {
             return this.DataHost.NeedsFill(this, MemberName);
+        }
+        
+        /// 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "15.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        protected override void OnShutdown() {
+            this.title.Dispose();
+            this.Data2.Dispose();
+            this.Data1.Dispose();
+            base.OnShutdown();
         }
     }
     

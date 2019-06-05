@@ -16,8 +16,9 @@ namespace UUExcelWorkbook
     {
         private void Лист5_Startup(object sender, System.EventArgs e)
         {
+           
         }
-
+        public Worksheet Worksheet { get; set; }
         private void Лист5_Shutdown(object sender, System.EventArgs e)
         {
         }
@@ -33,6 +34,7 @@ namespace UUExcelWorkbook
             this.Startup += new System.EventHandler(Лист5_Startup);
             this.Shutdown += new System.EventHandler(Лист5_Shutdown);
         }
+
 
         #endregion
 
